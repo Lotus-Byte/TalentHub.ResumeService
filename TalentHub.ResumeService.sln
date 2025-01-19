@@ -7,6 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{58D29281-E9D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeDataAccess", "ResumeDataAccess\ResumeDataAccess.csproj", "{C9596F51-B40B-496C-B737-4C8A1E03A97D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{F6E3409E-85B3-41D3-8786-ED6845E26E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeBll", "BussinessDatyaLayer\ResumeBll\ResumeBll.csproj", "{AA8545CD-021C-498E-8F80-CA6E9589D2EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResumeApi", "ResumeApi", "{AAA9A89A-D36A-487D-A46A-E1364211B98C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeAPI", "ResumeAPI\ResumeAPI.csproj", "{22D24A4A-A652-4076-9795-ACC618ECC17B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +25,21 @@ Global
 		{C9596F51-B40B-496C-B737-4C8A1E03A97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9596F51-B40B-496C-B737-4C8A1E03A97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9596F51-B40B-496C-B737-4C8A1E03A97D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8545CD-021C-498E-8F80-CA6E9589D2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8545CD-021C-498E-8F80-CA6E9589D2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8545CD-021C-498E-8F80-CA6E9589D2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8545CD-021C-498E-8F80-CA6E9589D2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D24A4A-A652-4076-9795-ACC618ECC17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D24A4A-A652-4076-9795-ACC618ECC17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D24A4A-A652-4076-9795-ACC618ECC17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D24A4A-A652-4076-9795-ACC618ECC17B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C9596F51-B40B-496C-B737-4C8A1E03A97D} = {58D29281-E9DC-4320-98A8-3C426CA05ACD}
+		{AA8545CD-021C-498E-8F80-CA6E9589D2EC} = {F6E3409E-85B3-41D3-8786-ED6845E26E99}
+		{22D24A4A-A652-4076-9795-ACC618ECC17B} = {AAA9A89A-D36A-487D-A46A-E1364211B98C}
 	EndGlobalSection
 EndGlobal

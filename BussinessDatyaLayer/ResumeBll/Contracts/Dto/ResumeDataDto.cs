@@ -1,7 +1,7 @@
 ﻿
-namespace ResumeDataAccess.Entities;
+namespace ResumeBll.Contracts.Dto;
 
-public sealed class Resume : IAggregateRoot<long>
+public sealed record ResumeDataDto
 {
     public long Id { get; set; }
 
@@ -22,12 +22,7 @@ public sealed class Resume : IAggregateRoot<long>
 
     public string Skills { get; set; } = null!;
 
-    public bool Deleted { get; set; }
-
     public DateTime Created { get; set; }
 
     public Guid CreateUserId { get; set; }
-
-    // TODO: c enum не взлетело
-    // public ICollection<ContactData> Contacts { get; set; } = new List<ContactData>();
 }

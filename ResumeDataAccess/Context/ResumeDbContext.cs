@@ -12,7 +12,7 @@ public class ResumeDbContext : DbContext
 {
     public virtual DbSet<Resume> Resumes { get; set; }
 
-    public virtual DbSet<ContactData> Contacts { get; set; }
+    // public virtual DbSet<ContactData> Contacts { get; set; }
 
     //static ResumeDbContext()
     //    => NpgsqlConnection.GlobalTypeMapper.MapEnum<ContactType>();
@@ -33,7 +33,7 @@ public class ResumeDbContext : DbContext
             var connectionString = configuration.GetConnectionString(DbConfig.CONNECTION_STRING_KEY);
 
             var dataSourceBuilder = new NpgsqlDataSourceBuilder(connectionString);
-            dataSourceBuilder.MapEnum<ContactType>();
+            // dataSourceBuilder.MapEnum<ContactType>();
             var dataSource = dataSourceBuilder.Build();
 
             optionsBuilder
@@ -53,7 +53,7 @@ public class ResumeDbContext : DbContext
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ResumeDbContext).Assembly);
 
-        modelBuilder.HasPostgresEnum<ContactType>();
+        //modelBuilder.HasPostgresEnum<ContactType>();
     }
     #endregion
 }

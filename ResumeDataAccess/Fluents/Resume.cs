@@ -12,7 +12,7 @@ internal sealed class Resume : IEntityTypeConfiguration<Entities.Resume>
     public void Configure(EntityTypeBuilder<Entities.Resume> builder)
     {
         builder
-            .ToTable("job");
+            .ToTable("resume");
 
         builder
              .HasKey(b => b.Id);
