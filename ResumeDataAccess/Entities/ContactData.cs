@@ -1,7 +1,7 @@
 ﻿
 namespace ResumeDataAccess.Entities;
 
-public sealed class ContactData : IAggregateRoot<long>
+/*public sealed class ContactData : IAggregateRoot<long>
 {
     public long Id { get; set; }
 
@@ -12,4 +12,4 @@ public sealed class ContactData : IAggregateRoot<long>
     public long ResumeId { get; set; }
 
     public Resume Resume { get; set; } = null!;
-}
+}*/

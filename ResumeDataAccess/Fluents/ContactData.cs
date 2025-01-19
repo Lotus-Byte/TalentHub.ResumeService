@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ResumeDataAccess.Fluents;
 
-internal sealed class ContactData : IEntityTypeConfiguration<Entities.ContactData>
+/*internal sealed class ContactData : IEntityTypeConfiguration<Entities.ContactData>
 {
     public void Configure(EntityTypeBuilder<Entities.ContactData> builder)
     {
@@ -23,4 +23,4 @@ internal sealed class ContactData : IEntityTypeConfiguration<Entities.ContactDat
              .HasMaxLength(256)
              .IsRequired();
     }
-}
+}*/
