@@ -4,8 +4,10 @@ using ResumeBll.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 
-namespace JobApi;
+namespace ResumeApi;
 
 public class Program
 {
@@ -21,6 +23,7 @@ public class Program
         // Internal services
         builder.Services.AddControllers();
         builder.Services.AddSwaggerConfiguration();
+        builder.Services.AddProblemDetails();
 
         var app = builder.Build();
 
@@ -38,6 +41,27 @@ public class Program
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
             });
+        }
+
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler(exceptionHandlerApp =>
+            {
+                exceptionHandlerApp.Run(async context =>
+                {
+                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+                    // using static System.Net.Mime.MediaTypeNames;
+                    context.Response.ContentType = Text.Plain;
+
+                    await context.Response.WriteAsync("An exception was thrown.");
+
+                    var exceptionHandlerPathFeature =
+                        context.Features.Get<IExceptionHandlerPathFeature>();
+                });
+            });
+
+            app.UseHsts();
         }
 
         app.Run();
