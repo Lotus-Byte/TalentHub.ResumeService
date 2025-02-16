@@ -3,13 +3,24 @@
   "profiles": {
     "http": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5234",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5000"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "containerName": "resumeapi",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_HTTP_PORTS": "5001"
+      },
+      "useSSL": false,
+      "httpPort": 5001
     }
   }
 }
